@@ -1,0 +1,6 @@
+[submodule "RecordTwitterSpace"]
+	path = RecordTwitterSpace
+	url = https://github.com/archivedc/RecordTwitterSpace
+[submodule "WatchTweets"]
+	path = WatchTweets
+	url = https://github.com/mkaraki/WatchTweets
