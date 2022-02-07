@@ -74,9 +74,17 @@ if __name__ == '__main__':
             if ('stime' in j):
                 stime = j['stime']
 
+    client_time = time.time()
     watch_client = watch.getClient()
 
     while True:
+        if (time.time() - 600 > client_time):
+            print('[INFO] Update tokens')
+            watch_client.guest_token = watch_client.generate_token()[
+                'guest_token']
+            watch_client.headers['x-guest-token'] = watch_client.guest_token
+            client_time = time.time()
+
         tstime = stime
         stime, res = watch.getAllNewTweets(watch_client, q, stime=stime)
 
