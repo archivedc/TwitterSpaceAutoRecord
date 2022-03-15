@@ -29,3 +29,5 @@ RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt \
     -r RecordTwitterSpace/requirements.txt \
     -r WatchTweets/requirements.txt 
+
+ENTRYPOINT [ "python", "/app/main.py" ]
