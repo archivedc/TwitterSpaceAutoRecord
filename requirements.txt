@@ -5,3 +5,4 @@ Twitter_Frontend_API
 ffmpeg_python
 python_dotenv
 requests
+beautifulsoup4
