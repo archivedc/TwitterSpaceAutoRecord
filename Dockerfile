@@ -20,9 +20,6 @@ COPY --from=git /app/WatchTweets/ /app/WatchTweets
 # Copy application
 COPY main.py /app/main.py
 
-# Install initial configuration file
-COPY .env.sample /app/.env
-
 # Install python requirements
 COPY requirements.txt /app/requirements.txt
 RUN python -m pip install --upgrade pip
